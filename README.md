@@ -43,9 +43,11 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
    ```
 
 7. **Buat Pull Request (PR)**
+   
    Setelah push, buka repositori yang kamu fork di GitHub dan klik tombol "Compare & pull request". Jelaskan perubahan yang kamu buat,     kemudian klik "Create pull request".
 
-9. **Tunggu review dan merge**   
+9. **Tunggu review dan merge**
+   
    Setelah pull request diajukan, minta tim untuk mereview perubahan yang kamu buat. Jika disetujui, perubahan akan digabungkan (merge)    ke branch utama (main).
 
 
