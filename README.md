@@ -49,7 +49,7 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
    Setelah pull request diajukan, minta tim untuk mereview perubahan yang kamu buat. Jika disetujui, perubahan akan digabungkan (merge)    ke branch utama (main).
 
 
-**Struktur Direktori**
+## Struktur Direktori
 
   Untuk memudahkan pengelolaan proyek, repositori ini memiliki struktur direktori sebagai berikut:
 
@@ -65,6 +65,6 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 └── README.md          # Dokumentasi utama repositori
 ```
 
-**Diskusi**
+## Diskusi
 
   Jika ada pertanyaan, saran, atau ingin berkolaborasi, silakan gunakan tab Discussions di repositori ini.
