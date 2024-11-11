@@ -19,6 +19,7 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
  
 
 3. **Buat branch baru**
+   
    Sebelum memulai perubahan, buat branch baru untuk fitur atau perbaikan yang akan kamu kerjakan. Gunakan perintah berikut:
    ```bash
    git checkout -b nama-branch
@@ -27,9 +28,11 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 
 
 4. **Lakukan perubahan**
-  Lakukan perubahan yang diperlukan pada kode dan pastikan perubahan tersebut berfungsi dengan baik.
+   
+   Lakukan perubahan yang diperlukan pada kode dan pastikan perubahan tersebut berfungsi dengan baik.
 
 5. **Commit perubahan**
+   
    Setelah selesai membuat perubahan, lakukan commit dengan pesan yang jelas dan deskriptif:
    ```bash
    git add .
@@ -37,6 +40,7 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
    ```
 
 6. **Push perubahan ke GitHub**
+   
    Setelah commit, push perubahan ke repositori GitHub kamu:
    ```bash
    git push origin nama-branch
@@ -46,7 +50,7 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
    
    Setelah push, buka repositori yang kamu fork di GitHub dan klik tombol "Compare & pull request". Jelaskan perubahan yang kamu buat,     kemudian klik "Create pull request".
 
-9. **Tunggu review dan merge**
+8. **Tunggu review dan merge**
    
    Setelah pull request diajukan, minta tim untuk mereview perubahan yang kamu buat. Jika disetujui, perubahan akan digabungkan (merge)    ke branch utama (main).
 
