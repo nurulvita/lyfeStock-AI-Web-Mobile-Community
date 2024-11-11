@@ -50,6 +50,7 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 
 
 **Struktur Direktori**
+
   Untuk memudahkan pengelolaan proyek, repositori ini memiliki struktur direktori sebagai berikut:
 
 ```bash
@@ -65,4 +66,5 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 ```
 
 **Diskusi**
+
   Jika ada pertanyaan, saran, atau ingin berkolaborasi, silakan gunakan tab Discussions di repositori ini.
