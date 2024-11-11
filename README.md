@@ -57,12 +57,12 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 
 ```bash
 /lyfeStock-AI-Web-Mobile-Community
-├── /web               # Berisi file pengembangan aplikasi web
-│   └── README.md      # Dokumentasi khusus untuk pengembangan web
-├── /mobile            # Berisi file pengembangan aplikasi mobile
-│   └── README.md      # Dokumentasi khusus untuk pengembangan mobile
-├── /ai                # Berisi file dan model untuk pengembangan AI
-│   └── README.md      # Dokumentasi khusus untuk pengembangan AI
+├── /web               # Berisi file pengembangan apps web
+│   └── README.md      # Dokumentasi web
+├── /mobile            # Berisi file pengembangan apps mobile
+│   └── README.md      # Dokumentasi mobile
+├── /ai                # Berisi file & model pengembangan AI
+│   └── README.md      # Dokumentasi AI
 ```
 
 ## Diskusi
