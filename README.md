@@ -63,8 +63,6 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 │   └── README.md      # Dokumentasi khusus untuk pengembangan mobile
 ├── /ai                # Berisi file dan model untuk pengembangan AI
 │   └── README.md      # Dokumentasi khusus untuk pengembangan AI
-├── /docs              # Berisi dokumentasi tambahan terkait proyek
-└── README.md          # Dokumentasi utama repositori
 ```
 
 ## Diskusi
