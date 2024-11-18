@@ -1,8 +1,8 @@
 # LyfeStock AI Web and Mobile Development Community
-Selamat datang di repositori AI Web and Mobile Community!
+Selamat datang di repositori LyfeStock AI Web and Mobile Community!
 
 ## Tujuan
-Github Community ini dibuat untuk fokus pada pengembangan aplikasi web dan mobile yang dilengkapi fitur AI.
+Github Community ini dibuat untuk fokus pada pengembangan aplikasi web dan mobile yang dilengkapi fitur AI sebagai solusi untuk peternakan ayam.
 
 ## Cara Berkontribusi
 Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
