@@ -42,7 +42,9 @@ Content-Type: multipart/form-data
 
 ## **Persiapan untuk Integrasi Mobile**
 Dependensi
+
 Tambahkan dependensi berikut ke file build.gradle di proyek Anda:
+
 gradle
 ```
 dependencies {
@@ -56,6 +58,7 @@ dependencies {
 
 ### **Langkah Implementasi**
 1. Buat Interface API dengan Retrofit:
+   
 kotlin
 ```
 import okhttp3.MultipartBody
@@ -76,6 +79,7 @@ data class PredictionResponse(
 )
 ```
 2. Buat Retrofit Instance:
+   
 kotlin
 ```
 import retrofit2.Retrofit
@@ -95,6 +99,7 @@ object RetrofitInstance {
 ```
 
 3. Fungsi untuk Upload Gambar
+   
 kotlin
 ```
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -134,6 +139,7 @@ fun uploadImage(
 }
 ```
 4. Panggil Fungsi di Activity/Fragment:
+   
 kotlin
 ```
 val imageFile = File(filePath) // Path gambar yang dipilih pengguna
