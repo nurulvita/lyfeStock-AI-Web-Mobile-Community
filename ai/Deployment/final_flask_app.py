@@ -107,6 +107,7 @@ city_coordinates = {
     'Surabaya': {'lat': -7.2575, 'lon': 112.7521},
     'Bandung': {'lat': -6.9175, 'lon': 107.6191},
     'Yogyakarta': {'lat': -7.7975, 'lon': 110.3708},
+    'Samarinda': {'lat': -0.5022, 'lon': 117.1536},
     
 }
 
