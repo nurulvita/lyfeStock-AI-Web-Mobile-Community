@@ -54,120 +54,339 @@ Content-Type: raw
 
 
 - **Body:**  
-- Ketik-an input di body-raw (json) seperti berikut:  
+- Ketik-an input di raw (json) seperti berikut:  
   ```
-    {
-  "cities": ["Sekupang", "Batam Center", "Nongsa", "Bengkong", "Tanjung Uncang", "Baloi", "Jakarta", "Surabaya", "Bandung", "Medan", "Denpasar", "Makassar", "Yogyakarta", "Semarang"]
-   }
+  {
+  "cities": ["Barelang", "Batam Center", "Nongsa", "Tanjung Uncang", "Sekupang", "Jakarta", "Surabaya", "Bandung", "Yogyakarta"]
+  }
   ```
-```
 
-```
+
+
 ### **Contoh Respons**
 ```json
 
-{
 [
     {
-        "city": "Sekupang",
-        "temperature": 31.16,
-        "humidity": 66,
-        "windspeed": 2.77,
-        "description": "overcast clouds"
-    },
-    {
-        "city": "Batam Center",
-        "temperature": 30.96,
-        "humidity": 62,
-        "windspeed": 3.09,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Nongsa",
-        "temperature": 31.09,
-        "humidity": 62,
-        "windspeed": 3.09,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Bengkong",
-        "temperature": 31.06,
-        "humidity": 62,
-        "windspeed": 3.09,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Tanjung Uncang",
-        "temperature": 31.08,
-        "humidity": 65,
-        "windspeed": 2.9,
-        "description": "overcast clouds"
-    },
-    {
-        "city": "Baloi",
-        "temperature": 31.04,
-        "humidity": 62,
-        "windspeed": 3.09,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Jakarta",
-        "temperature": 28.1,
-        "humidity": 76,
-        "windspeed": 5.14,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Surabaya",
-        "temperature": 26.68,
-        "humidity": 85,
-        "windspeed": 4.63,
-        "description": "moderate rain"
-    },
-    {
-        "city": "Bandung",
-        "temperature": 26.38,
-        "humidity": 99,
-        "windspeed": 1.76,
-        "description": "moderate rain"
-    },
-    {
-        "city": "Medan",
-        "temperature": 28.04,
-        "humidity": 89,
-        "windspeed": 6.17,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Denpasar",
-        "temperature": 29.81,
-        "humidity": 79,
-        "windspeed": 4.12,
-        "description": "scattered clouds"
-    },
-    {
-        "city": "Makassar",
-        "temperature": 31.04,
+        "city": "Barelang",
+        "timestamp": "2024-12-02 12:00:00",
+        "temperature": 29.84,
         "humidity": 70,
-        "windspeed": 3.6,
-        "description": "few clouds"
+        "windspeed": 1.95,
+        "description": "light rain"
     },
     {
-        "city": "Yogyakarta",
-        "temperature": 25.64,
-        "humidity": 91,
-        "windspeed": 2.64,
+        "city": "Barelang",
+        "timestamp": "2024-12-02 15:00:00",
+        "temperature": 28.34,
+        "humidity": 75,
+        "windspeed": 2.32,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-02 18:00:00",
+        "temperature": 25.84,
+        "humidity": 82,
+        "windspeed": 6.77,
+        "description": "moderate rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-02 21:00:00",
+        "temperature": 25.6,
+        "humidity": 79,
+        "windspeed": 7.02,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 00:00:00",
+        "temperature": 26.44,
+        "humidity": 75,
+        "windspeed": 5.17,
         "description": "overcast clouds"
     },
     {
-        "city": "Semarang",
-        "temperature": 27.01,
-        "humidity": 89,
-        "windspeed": 2.06,
-        "description": "moderate rain"
-    }
-]
-}
+        "city": "Barelang",
+        "timestamp": "2024-12-03 03:00:00",
+        "temperature": 28.68,
+        "humidity": 67,
+        "windspeed": 5.13,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 06:00:00",
+        "temperature": 27.22,
+        "humidity": 81,
+        "windspeed": 6.15,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 09:00:00",
+        "temperature": 26.42,
+        "humidity": 82,
+        "windspeed": 5.55,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 12:00:00",
+        "temperature": 26.36,
+        "humidity": 82,
+        "windspeed": 4.48,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 15:00:00",
+        "temperature": 26.48,
+        "humidity": 79,
+        "windspeed": 3.41,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 18:00:00",
+        "temperature": 26.65,
+        "humidity": 80,
+        "windspeed": 4.05,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-03 21:00:00",
+        "temperature": 26.71,
+        "humidity": 79,
+        "windspeed": 4.6,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 00:00:00",
+        "temperature": 26.87,
+        "humidity": 78,
+        "windspeed": 3.86,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 03:00:00",
+        "temperature": 29.29,
+        "humidity": 66,
+        "windspeed": 4.66,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 06:00:00",
+        "temperature": 29.52,
+        "humidity": 65,
+        "windspeed": 5.28,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 09:00:00",
+        "temperature": 28.83,
+        "humidity": 66,
+        "windspeed": 3.61,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 12:00:00",
+        "temperature": 27.88,
+        "humidity": 71,
+        "windspeed": 2.42,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 15:00:00",
+        "temperature": 27.41,
+        "humidity": 74,
+        "windspeed": 1.47,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 18:00:00",
+        "temperature": 26.96,
+        "humidity": 77,
+        "windspeed": 1.56,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-04 21:00:00",
+        "temperature": 26.27,
+        "humidity": 82,
+        "windspeed": 2.85,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 00:00:00",
+        "temperature": 26.15,
+        "humidity": 84,
+        "windspeed": 3.51,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 03:00:00",
+        "temperature": 28.57,
+        "humidity": 73,
+        "windspeed": 3.92,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 06:00:00",
+        "temperature": 29.52,
+        "humidity": 67,
+        "windspeed": 4.71,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 09:00:00",
+        "temperature": 29.61,
+        "humidity": 67,
+        "windspeed": 5.31,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 12:00:00",
+        "temperature": 27.6,
+        "humidity": 77,
+        "windspeed": 2.59,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 15:00:00",
+        "temperature": 27.47,
+        "humidity": 77,
+        "windspeed": 3.07,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 18:00:00",
+        "temperature": 26.38,
+        "humidity": 83,
+        "windspeed": 2.38,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-05 21:00:00",
+        "temperature": 26.06,
+        "humidity": 83,
+        "windspeed": 2.24,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 00:00:00",
+        "temperature": 26.74,
+        "humidity": 81,
+        "windspeed": 2.65,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 03:00:00",
+        "temperature": 29.55,
+        "humidity": 66,
+        "windspeed": 4.67,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 06:00:00",
+        "temperature": 30.85,
+        "humidity": 62,
+        "windspeed": 5.41,
+        "description": "broken clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 09:00:00",
+        "temperature": 29.91,
+        "humidity": 64,
+        "windspeed": 5.26,
+        "description": "broken clouds"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 12:00:00",
+        "temperature": 28.28,
+        "humidity": 73,
+        "windspeed": 2.59,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 15:00:00",
+        "temperature": 27.54,
+        "humidity": 77,
+        "windspeed": 2.73,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 18:00:00",
+        "temperature": 27.41,
+        "humidity": 78,
+        "windspeed": 2.67,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-06 21:00:00",
+        "temperature": 26.81,
+        "humidity": 80,
+        "windspeed": 2.16,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-07 00:00:00",
+        "temperature": 27.15,
+        "humidity": 79,
+        "windspeed": 2.17,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-07 03:00:00",
+        "temperature": 29.61,
+        "humidity": 66,
+        "windspeed": 4.27,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-07 06:00:00",
+        "temperature": 30.29,
+        "humidity": 63,
+        "windspeed": 4.94,
+        "description": "light rain"
+    },
+    {
+        "city": "Barelang",
+        "timestamp": "2024-12-07 09:00:00",
+        "temperature": 29.98,
+        "humidity": 65,
+        "windspeed": 5.56,
+        "description": "scattered clouds"
+    },
 ```
 
 
