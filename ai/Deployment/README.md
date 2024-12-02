@@ -13,7 +13,7 @@ Dokumentasi ini menjelaskan cara mengintegrasikan Flask API untuk prediksi gamba
 https://abcd-1234.ngrok-free.app
 
 
-### **Endpoint**
+### **Endpoint Diagnosa Kesehatan Ayam**
  ```bash
 POST /predict
  ```
@@ -39,6 +39,137 @@ Content-Type: multipart/form-data
 "confidence": 0.996834933757782
 }
 ```
+
+
+### **Endpoint untuk Cuaca**
+ ```bash
+POST /weather
+ ```
+
+
+### **Request**
+- **Metode:** `POST`
+- **Headers:**  
+Content-Type: raw
+
+
+- **Body:**  
+- Ketik-an input di body-raw (json) seperti berikut:  
+  ```
+    {
+  "cities": ["Sekupang", "Batam Center", "Nongsa", "Bengkong", "Tanjung Uncang", "Baloi", "Jakarta", "Surabaya", "Bandung", "Medan", "Denpasar", "Makassar", "Yogyakarta", "Semarang"]
+   }
+  ```
+```
+
+```
+### **Contoh Respons**
+```json
+
+{
+[
+    {
+        "city": "Sekupang",
+        "temperature": 31.16,
+        "humidity": 66,
+        "windspeed": 2.77,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Batam Center",
+        "temperature": 30.96,
+        "humidity": 62,
+        "windspeed": 3.09,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Nongsa",
+        "temperature": 31.09,
+        "humidity": 62,
+        "windspeed": 3.09,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Bengkong",
+        "temperature": 31.06,
+        "humidity": 62,
+        "windspeed": 3.09,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Tanjung Uncang",
+        "temperature": 31.08,
+        "humidity": 65,
+        "windspeed": 2.9,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Baloi",
+        "temperature": 31.04,
+        "humidity": 62,
+        "windspeed": 3.09,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Jakarta",
+        "temperature": 28.1,
+        "humidity": 76,
+        "windspeed": 5.14,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Surabaya",
+        "temperature": 26.68,
+        "humidity": 85,
+        "windspeed": 4.63,
+        "description": "moderate rain"
+    },
+    {
+        "city": "Bandung",
+        "temperature": 26.38,
+        "humidity": 99,
+        "windspeed": 1.76,
+        "description": "moderate rain"
+    },
+    {
+        "city": "Medan",
+        "temperature": 28.04,
+        "humidity": 89,
+        "windspeed": 6.17,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Denpasar",
+        "temperature": 29.81,
+        "humidity": 79,
+        "windspeed": 4.12,
+        "description": "scattered clouds"
+    },
+    {
+        "city": "Makassar",
+        "temperature": 31.04,
+        "humidity": 70,
+        "windspeed": 3.6,
+        "description": "few clouds"
+    },
+    {
+        "city": "Yogyakarta",
+        "temperature": 25.64,
+        "humidity": 91,
+        "windspeed": 2.64,
+        "description": "overcast clouds"
+    },
+    {
+        "city": "Semarang",
+        "temperature": 27.01,
+        "humidity": 89,
+        "windspeed": 2.06,
+        "description": "moderate rain"
+    }
+]
+}
+```
+
 
 ## **Persiapan untuk Integrasi Mobile**
 Dependensi
