@@ -7,13 +7,13 @@ Dokumentasi ini menjelaskan cara mengintegrasikan Flask API untuk prediksi gamba
 ## **Informasi Dasar**
 
 ### **Base URL**
-- URL dasar Flask API bersifat dinamis karena menggunakan **Ngrok** untuk membuka akses server lokal.  
+- URL dasar Flask API bersifat dinamis karena menggunakan **Ngrok** untuk membuka akses server lokal dan URL dapat berubah setiap kali server di-restart.  
 - **Hubungi saya ml ops (roy) di wa grup atau personal** untuk mendapatkan URL Ngrok terbaru.  
 - Contoh URL Ngrok:
 https://abcd-1234.ngrok-free.app
 
 
-### **Endpoint Diagnosa Kesehatan Ayam**
+### **Endpoint Prediksi Diagnosa Kesehatan Ayam**
  ```bash
 POST /predict
  ```
@@ -41,7 +41,7 @@ Content-Type: multipart/form-data
 ```
 
 
-### **Endpoint untuk Cuaca**
+### **Endpoint untuk Prediksi Cuaca**
  ```bash
 POST /weather
  ```
@@ -398,11 +398,14 @@ Tambahkan dependensi berikut ke file build.gradle di proyek Anda:
 gradle
 ```
 dependencies {
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.github.bumptech.glide:glide:4.15.1' // Untuk pratinjau gambar
-    implementation 'androidx.room:room-runtime:2.5.1' // Untuk database SQLite
-    kapt 'androidx.room:room-compiler:2.5.1'
+implementation "com.squareup.retrofit2:retrofit:2.9.0"
+implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+implementation "androidx.room:room-runtime:2.5.0"
+kapt "androidx.room:room-compiler:2.5.0"
+implementation "androidx.compose.ui:ui:1.5.0"
+implementation "androidx.compose.material:material:1.5.0"
+implementation "androidx.compose.ui:ui-tooling-preview:1.5.0"
+
 }
 ```
 
@@ -413,20 +416,40 @@ kotlin
 ```
 import okhttp3.MultipartBody
 import retrofit2.Call
-import retrofit2.http.Multipart
-import retrofit2.http.POST
-import retrofit2.http.Part
+import retrofit2.http.*
 
 interface ApiService {
+
     @Multipart
-    @POST("predict")
-    fun predict(@Part file: MultipartBody.Part): Call<PredictionResponse>
+    @POST("/predict")
+    fun predictChickenDisease(
+        @Part file: MultipartBody.Part
+    ): Call<PredictionResponse>
+
+    @POST("/weather")
+    fun getWeather(
+        @Body cities: WeatherRequest
+    ): Call<List<WeatherResponse>>
 }
 
 data class PredictionResponse(
     val `class`: String,
     val confidence: Double
 )
+
+data class WeatherRequest(
+    val cities: List<String>
+)
+
+data class WeatherResponse(
+    val city: String,
+    val timestamp: String,
+    val temperature: Double,
+    val humidity: Int,
+    val windspeed: Double,
+    val description: String
+)
+
 ```
 2. Buat Retrofit Instance:
    
@@ -435,10 +458,11 @@ kotlin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitInstance {
-    private const val BASE_URL = "https://abcd-1234.ngrok-free.app" // URL Ngrok terbaru
+object RetrofitClient {
+    private const val BASE_URL = "https://abcd-1234.ngrok-free.app" #url yang ml ops
+kasih
 
-    val api: ApiService by lazy {
+    val apiService: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
@@ -505,6 +529,38 @@ uploadImage(imageFile,
 )
 ```
 
+5. Prediksi Cuaca
+   Untuk mengirim request cuaca ke Flask API:
+   
+kotlin
+fun getWeatherForecast() {
+    val cities = listOf("Barelang", "Batam Center", "Jakarta")
+    val weatherRequest = WeatherRequest()
+    weatherRequest.cities = cities
+
+    val apiService = RetrofitClient.getRetrofitInstance().create(ApiService::class.java)
+    val call = apiService.getWeatherForecast(weatherRequest)
+
+    call.enqueue(object : Callback<List<WeatherResponse>> {
+        override fun onResponse(call: Call<List<WeatherResponse>>, response: Response<List<WeatherResponse>>) {
+            if (response.isSuccessful) {
+                val weatherResponses = response.body()
+                // Tampilkan data cuaca
+                weatherResponses?.forEach { weather ->
+                    Log.d("Weather", "City: ${weather.city} Temp: ${weather.temperature}")
+                }
+            }
+        }
+
+        override fun onFailure(call: Call<List<WeatherResponse>>, t: Throwable) {
+            // Tangani kegagalan
+            Log.e("Error", "Request failed", t)
+        }
+    })
+}
+```
+
+
 ## **Langkah Pengujian**
 Jalankan Flask API:
 (Hubungi ml ops agar menghidupkan Flask API)
@@ -515,7 +571,7 @@ dapatkan URL terbaru untuk pengujian.
 ### **Uji Aplikasi Mobile:**
 
 1. Pastikan gambar dapat diunggah melalui UI aplikasi.
-2. Tampilkan hasil prediksi di aplikasi.
+2. Tampilkan hasil prediksi diagnosa dan cuaca di aplikasi.
 3. Simpan hasil ke database SQLite untuk digunakan kembali.
 
 ## Jika ada pertanyaan atau memerlukan URL baru, hubungi saya karena saya yang mengelola server Flask.
