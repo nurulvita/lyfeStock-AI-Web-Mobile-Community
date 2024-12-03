@@ -1,6 +1,6 @@
 # Integrasi Flask API untuk Tim Mobile
 
-Dokumentasi ini menjelaskan cara mengintegrasikan Flask API untuk prediksi gambar dengan aplikasi Android menggunakan Retrofit. Flask API di-host secara lokal dan diakses melalui **Ngrok**.
+Dokumentasi ini menjelaskan cara mengintegrasikan Flask API untuk prediksi gambar dan prediksi cuaca dengan aplikasi Android menggunakan Retrofit. Flask API di-host secara lokal dan diakses melalui **Ngrok**.
 
 ---
 
