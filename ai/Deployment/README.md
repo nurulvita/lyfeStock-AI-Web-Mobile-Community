@@ -57,7 +57,7 @@ Content-Type: raw
 - Ketik-an input di raw (json) seperti berikut:  
   ```
   {
-  "cities": ["Barelang", "Batam Center", "Nongsa", "Tanjung Uncang", "Sekupang", "Jakarta", "Surabaya", "Bandung", "Yogyakarta"]
+  "cities": ["Barelang", "Batam Center", "Nongsa", "Tanjung Uncang", "Sekupang", "Jakarta", "Surabaya", "Bandung", "Yogyakarta", "Samarinda"]
   }
   ```
 
