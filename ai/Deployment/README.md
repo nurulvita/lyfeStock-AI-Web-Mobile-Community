@@ -528,11 +528,11 @@ uploadImage(imageFile,
     }
 )
 ```
-
 5. Prediksi Cuaca
    Untuk mengirim request cuaca ke Flask API:
    
 kotlin
+```
 fun getWeatherForecast() {
     val cities = listOf("Barelang", "Batam Center", "Jakarta")
     val weatherRequest = WeatherRequest()
