@@ -39,7 +39,7 @@ Peternakan, Optimalisasi Pengelolaan peternakan, Mendiagnosa kesehatan Hewan    
 Masalah : 
 - Penyakit yang menyerang ternak ayam sangat berdampak pada produksi telur               dan menimbulkan kerugian besar bagi peternak. 
 - Kurangnya pendataan hewan ternak ayam secara terstruktur.
-- Pemantauan manual terhadap pertumbuhan dan kesehatan ayam individu.
+- Diagnosa manual terhadap pertumbuhan dan kesehatan ayam individu.
 
 ### 3. Solution
 Solusi : 
