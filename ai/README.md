@@ -62,6 +62,8 @@ Kami menggunakan TensorFlow dan Keras.
 - Pembangunan Model <br />
 Kami menggunakan model MobileNetV2.
 
+- kami melatih model dengan 20 epoch
+
 - Model Evaluation <br />
   ```bash
                        precision    recall   f1-score  support
@@ -107,4 +109,4 @@ Sebelum deploy kami melakukan testing secara lokal dengan ngrok lalu setelah itu
 Endpoint API yang telah kita deploy dapat digunakan tim mobile untuk di implementasikan di aplikasi mobile untuk melakukan prediksi diagnosa dan prediksi cuaca.
 
 ## Conclusion
-Aplikasi LyfeStox dapat digunakan oleh user (peternak ayam) dalam mengelola peternakan, meningkatkan produktivitas, dan mengurangi kerugian!  
+Development berjalan lancar dan aplikasi LyfeStox dapat digunakan oleh user (peternak ayam) dalam mengelola peternakan, meningkatkan produktivitas, dan mengurangi kerugian!  
