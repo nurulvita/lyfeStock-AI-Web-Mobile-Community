@@ -1,7 +1,7 @@
 <h1 align="center">  This is a Machine Learning / AI Project </h1>
 
 <p align="center"> 
-Ini adalah struktural dokumentasi AI Development
+AI Development Documentation for LyfeStox
 </p>
 
 <div align="center">
