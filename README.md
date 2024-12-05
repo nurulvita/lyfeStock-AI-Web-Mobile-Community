@@ -1,5 +1,5 @@
 # LyfeStock AI Web and Mobile Development Community
-Selamat datang di repositori LyfeStock AI Web and Mobile Community!
+Selamat datang di repositori LyfeStock yang terdiri dari Tim AAI, Tim Web dan Tim Mobile!
 
 ## Tujuan
 Github Community ini dibuat untuk fokus pada pengembangan aplikasi web dan mobile yang dilengkapi fitur AI sebagai solusi untuk peternakan ayam.
@@ -72,3 +72,5 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 ## Diskusi
 
   Jika ada pertanyaan, saran, atau ingin berkolaborasi, silakan gunakan tab Discussions di repositori ini.
+
+### Tonton video showcase project (https://www.youtube.com/watch?v=TvKNVV1iIh8)  
