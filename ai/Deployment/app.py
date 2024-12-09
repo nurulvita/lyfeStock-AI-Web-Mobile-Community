@@ -7,7 +7,7 @@ import os
 import logging
 import requests
 import pandas as pd
-from prometheus_flask_exporter import PrometheusMetrics
+
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
@@ -15,8 +15,7 @@ CORS(app)  # Enable CORS
 # Enable logging for debugging
 logging.basicConfig(level=logging.DEBUG)
 
-# Initialize Prometheus metrics
-metrics = PrometheusMetrics(app)
+
 
 # Load model architecture and weights
 try:
@@ -173,10 +172,6 @@ def weather():
     # Return the weather data in JSON format
     return weather_df.to_json(orient='records')
 
-# Endpoint monitoring untuk Prometheus
-@app.route('/metrics')
-def metrics_endpoint():
-    return metrics.export_metrics()
 
 @app.route('/location-type', methods=['POST'])
 def location_type():
