@@ -43,14 +43,14 @@ jobs:
       env:
         IBMCLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
       run: |
-        ibmcloud login --apikey $IBMCLOUD_API_KEY
-        ibmcloud target --region us-south
+        ibmcloud login --apikey $IBMCLOUD_API_KEY -r us-south
+        ibmcloud target --resource-group default
 
     # 7. Deploy ke IBM Cloud Code Engine
     - name: Deploy to IBM Cloud Code Engine
       run: |
         ibmcloud ce project select -n testing-project
-        ibmcloud ce app update \
+        ibmcloud ce app create \
           --name predict-chicken-test \
           --image royrobin99/predict-chicken-test:latest \
           --cpu 2 --memory 4Gi \
