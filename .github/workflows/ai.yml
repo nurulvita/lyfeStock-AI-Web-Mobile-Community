@@ -25,7 +25,7 @@ jobs:
     # 3. Build Docker Image
     - name: Build Docker Image
       run: |
-        docker build -f ai/deployment/Dockerfile --tag predict-chicken-test .
+        docker build -f ai/Deployment/Dockerfile --tag predict-chicken-test .
         docker tag predict-chicken-test:latest royrobin99/predict-chicken-test:latest
 
     # 4. Push Docker Image ke Docker Hub
