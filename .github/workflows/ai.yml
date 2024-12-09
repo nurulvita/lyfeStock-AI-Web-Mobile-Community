@@ -1,9 +1,7 @@
 name: CI/CD Pipeline for ai
 
 on:
-  push:
-    branches:
-      - main  # Trigger pipeline saat ada push ke branch 'main'
+  workflow_dispatch:  # Hanya berjalan jika dipicu secara manual
 
 jobs:
   build-and-deploy:
@@ -21,7 +19,8 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build --tag predict-chicken-test .
+        # Menyebutkan path yang benar ke folder Deployment
+        docker build --tag predict-chicken-test ./ai/Deployment
         docker tag predict-chicken-test:latest royrobin99/predict-chicken-test:latest
 
     - name: Push Docker Image
