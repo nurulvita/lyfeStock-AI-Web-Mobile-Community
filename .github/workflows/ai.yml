@@ -1,4 +1,4 @@
-name: CI/CD Pipeline for ai
+name: CI/CD Pipeline for AI
 
 on:
   push:
@@ -25,24 +25,32 @@ jobs:
     # 3. Build Docker Image
     - name: Build Docker Image
       run: |
-        docker build -f ai/Deployment/Dockerfile --tag predict-chicken-test .
+        docker build -f ai/Deployment/Dockerfile -t predict-chicken-test .
         docker tag predict-chicken-test:latest royrobin99/predict-chicken-test:latest
 
     # 4. Push Docker Image ke Docker Hub
     - name: Push Docker Image
-      run: |
-        docker push royrobin99/predict-chicken-test:latest
+      run: docker push royrobin99/predict-chicken-test:latest
 
-    # 5. Login ke IBM Cloud
-    - name: IBM Cloud Login
+    # 5. Install IBM Cloud CLI
+    - name: Install IBM Cloud CLI
       run: |
-        ibmcloud login --apikey ${{ secrets.IBM_CLOUD_API_KEY }}
+        curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+        ibmcloud plugin install code-engine
+
+    # 6. Login ke IBM Cloud
+    - name: IBM Cloud Login
+      env:
+        IBMCLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
+      run: |
+        ibmcloud login --apikey $IBMCLOUD_API_KEY
         ibmcloud target --region us-south
 
-    # 6. Deploy ke IBM Cloud Code Engine
+    # 7. Deploy ke IBM Cloud Code Engine
     - name: Deploy to IBM Cloud Code Engine
       run: |
-        ibmcloud ce application apply \
+        ibmcloud ce project select -n testing-project
+        ibmcloud ce app update \
           --name predict-chicken-test \
           --image royrobin99/predict-chicken-test:latest \
           --cpu 2 --memory 4Gi \
