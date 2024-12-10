@@ -106,7 +106,8 @@ Kami menggunakan model MobileNetV2.
   - Prediksi cuaca dengan api dari openweather.
 
 ## Deployment
-Sebelum deploy kami melakukan testing secara lokal dengan ngrok lalu setelah itu kami deploy/hosting ke ibm cloud dengan docker.
+Sebelum deploy kami melakukan testing secara lokal dengan ngrok lalu setelah itu kami 
+menjadikan flask menjadi docker image dan push ke dockerhub lalu menerapkan CI/CD github action untuk deploy/hosting ke ibm cloud code engine.
 
 ## Result
 Endpoint API yang telah kita deploy dapat digunakan tim mobile untuk di implementasikan di aplikasi mobile untuk melakukan prediksi diagnosa dan prediksi cuaca.
