@@ -43,7 +43,7 @@ jobs:
       env:
         IBMCLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
       run: |
-        ibmcloud login --apikey $IBMCLOUD_API_KEY -r us-south
+        ibmcloud login --apikey $IBMCLOUD_API_KEY -r dallas
 
     # 7. Set Target Resource Group
     - name: Target Resource Group
