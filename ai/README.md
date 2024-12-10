@@ -28,6 +28,9 @@ AI Development Documentation for LyfeStox
 - Salwa Az Zahra P.M (Machine Learning Engineer)
 - Roy Robin (Machine Learning Ops)
 
+## Mentor
+
+- Arifian Saputra
 
 ## Idea Background
 
