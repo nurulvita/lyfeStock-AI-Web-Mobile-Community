@@ -294,4 +294,4 @@ dapatkan URL terbaru untuk pengujian.
 2. Tampilkan hasil prediksi diagnosa dan cuaca di aplikasi.
 3. Simpan hasil ke database SQLite untuk digunakan kembali.
 
-## Jika ada pertanyaan atau memerlukan URL baru, hubungi saya karena saya yang mengelola server Flask.
+## Note : Pengujian lokal berjalan lancar dan Flask API sudah terdeploy di ibm cloud dan bersifat kredensial
