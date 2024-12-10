@@ -3,8 +3,8 @@ name: CI/CD Pipeline for AI
 on:
   push:
     branches:
-      - main  # Jalankan pipeline setiap ada perubahan di branch 'main'
-  workflow_dispatch:  # Memungkinkan untuk menjalankan secara manual
+      - main
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -44,9 +44,12 @@ jobs:
         IBMCLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
       run: |
         ibmcloud login --apikey $IBMCLOUD_API_KEY -r us-south
-        ibmcloud target --resource-group default
 
-    # 7. Deploy ke IBM Cloud Code Engine
+    # 7. Set Target Resource Group
+    - name: Target Resource Group
+      run: ibmcloud target -g default  # Pastikan 'default' diganti dengan nama resource group Anda jika berbeda
+
+    # 8. Deploy ke IBM Cloud Code Engine
     - name: Deploy to IBM Cloud Code Engine
       run: |
         ibmcloud ce project select -n testing-project
