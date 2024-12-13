@@ -81,6 +81,8 @@ Kami menggunakan model MobileNetV2.
         weighted avg       0.92      0.92      0.92       807
    ```
 
+- Kami juga melakukan fine tunning agar model bisa berjalan optimal
+
   ```bash
   Validation Loss: 0.3209264874458313
   Validation Accuracy: 0.9442379474639893
