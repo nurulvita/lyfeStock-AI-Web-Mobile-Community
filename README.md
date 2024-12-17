@@ -13,9 +13,8 @@ Untuk berkontribusi dalam proyek ini, ikuti langkah-langkah berikut:
 2. **Clone repositori ke komputer lokal**  
    Setelah repositori di-fork, clone repositori ke komputer kamu menggunakan perintah berikut:
    ```bash
-   git clone https://github.com/username/lyfeStock-AI-Web-Mobile-Community.git
+   git clone https://github.com/rroy99/lyfeStock-AI-Web-Mobile-Community.git
     ```
-    (Gantilah username dengan nama pengguna GitHub kamu.)
  
 
 3. **Buat branch baru**
