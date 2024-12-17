@@ -1,0 +1,218 @@
+/* main */
+main {
+  box-sizing: border-box;
+}
+
+/* wrapint */
+.wrapint {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    url(/lyfestox/asset/Service/hero.jpg);
+  background-size: cover;
+  padding: 20px 70px;
+  height: 530px;
+  display: flex;
+  position: relative;
+  margin-bottom: 320px;
+}
+.wrapint .hero {
+  width: 630px;
+  margin-top: -10px;
+  padding: 60px 20px;
+}
+.wrapint .hero1 {
+  margin-bottom: 50px;
+}
+.wrapint .hero1 p {
+  color: #fafafa;
+}
+.wrapint .hero2 {
+  margin: 50px;
+}
+.wrapint .hero2 a {
+  width: 300px;
+  display: flex;
+  padding: 20px;
+  background-color: #fafafa;
+  border-radius: 40px;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  text-decoration: none;
+  color: #111111;
+}
+.wrapint .hero2 a:hover {
+  background-color: #e87c01;
+  color: #fafafa;
+  transition: all 0.5s;
+}
+.wrapint .hero2 img {
+  width: 30px;
+  margin-right: 10px;
+}
+.wrapint .phone {
+  position: absolute;
+  top: 160px;
+  right: 150px;
+}
+.wrapint .phone img {
+  height: 600px;
+}
+
+/* fitur */
+/* fitur */
+main .fitur {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2% 7%;
+  margin: 5% auto;
+}
+main .fitur .fiturtitle {
+  text-align: center;
+  margin-bottom: 30px;
+}
+main .fitur .fiturlist {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  justify-content: center;
+}
+main .fiturlist .fiturbox {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+}
+main .fiturbox h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+main .fiturbox p {
+  text-align: justify;
+  line-height: 1.3;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+main .fiturlist .fiturbox img {
+  width: 280px;
+  height: auto;
+  margin-bottom: 15px;
+  align-self: center;
+}
+
+/* form */
+main .forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+main .formwrap {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.formwrap .content {
+  padding: 30px;
+  width: 45%;
+}
+
+.content h1 {
+  color: #e87c01;
+  margin-bottom: 20px;
+}
+
+.formwrap .formimg img {
+  height: 352px;
+}
+
+.formwrap .formcontainer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.formcontainer h1 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.form-group {
+  margin-bottom: 32px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-group input::placeholder {
+  color: #888;
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #e87c01;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.submit-btn:hover {
+  background-color: #cc6f01;
+}
+
+/* Pop-up */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  padding: 10px 20px;
+  background-color: #e87c01;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
