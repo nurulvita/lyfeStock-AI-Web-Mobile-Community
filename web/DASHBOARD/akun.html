@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengaturan Akun</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <!-- Navigasi -->
+<div class="container">
+  <div class="navigasi">
+    <div class="nav-logo">
+      <a href="">
+        <span class="icon">
+          <img src="assets/logo.png" alt="Logo LyfeStox" />
+        </span>
+      </a>
+    </div>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="icon"> <ion-icon name="grid-outline"></ion-icon></span>
+          <span class="title">Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="pengguna.html">
+          <span class="icon"> <ion-icon name="people-outline"></ion-icon></span>
+          <span class="title">Pengguna</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="kelola.html">
+          <span class="icon"> <ion-icon name="bar-chart-outline"></ion-icon></span>
+          <span class="title">Kandang</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="pakan.html">
+          <span class="icon"> <ion-icon name="nutrition-outline"></ion-icon></span>
+          <span class="title">Pakan</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="ovk.html">
+          <span class="icon"> <ion-icon name="medkit-outline"></ion-icon></span>
+          <span class="title">OVK</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="peforma.html">
+          <span class="icon"> <ion-icon name="analytics-outline"></ion-icon></span>
+          <span class="title">Performa</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="akun.html">
+          <span class="icon"> <ion-icon name="settings-outline"></ion-icon></span>
+          <span class="title">Pengaturan</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="">
+          <span class="icon"> <ion-icon name="log-out-outline"></ion-icon></span>
+          <span class="title">Keluar</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="search-here" />
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+
+        <div class="admin">
+          <img src="image/admin2.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- Kelola Akun -->
+      <div class="content">
+        <div class="account-settings">
+          <h2>Pengaturan Akun</h2>
+          <div class="profile">
+            <img src="image/admin2.jpg" alt="Profile Image" width="80" height="80" />
+            <div class="info">
+              <div class="name">Kang Admin</div>
+              <div class="email">Admin123@gmail.com</div>
+            </div>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="nama-lengkap">Nama Lengkap</label>
+              <input id="nama-lengkap" type="text" value="Hidyat Nur Wahid" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" value="Admin123@gmail.com" />
+            </div>
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input id="username" type="text" value="Kang Admin" />
+            </div>
+            <div class="form-group">
+              <label for="no-telp">No.Telp</label>
+              <input id="no-telp" type="text" value="082363563198" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="password" type="password" value="**********" />
+            </div>
+            <div class="form-group">
+              <label for="tgl-lahir">Tgl. Lahir</label>
+              <input id="tgl-lahir" type="text" value="24/10/2001" />
+            </div>
+            <div class="form-group">
+              <button class="btn" type="submit">Perbarui</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script js -->
+    <script src="js/main.js"></script>
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

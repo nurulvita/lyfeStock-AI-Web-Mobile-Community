@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kelola Pengguna</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <div class="container">
+      <div class="navigasi">
+        <div class="nav-logo">
+          <a href="">
+            <span class="icon">
+              <img src="assets/logo.png" alt="Logo LyfeStox" />
+            </span>
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a href="index.html">
+              <span class="icon"> <ion-icon name="grid-outline"></ion-icon></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="pengguna.html">
+              <span class="icon"> <ion-icon name="people-outline"></ion-icon></span>
+              <span class="title">Pengguna</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="kelola.html">
+              <span class="icon"> <ion-icon name="bar-chart-outline"></ion-icon></span>
+              <span class="title">Kandang</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="pakan.html">
+              <span class="icon"> <ion-icon name="nutrition-outline"></ion-icon></span>
+              <span class="title">Pakan</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="ovk.html">
+              <span class="icon"> <ion-icon name="medkit-outline"></ion-icon></span>
+              <span class="title">OVK</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="peforma.html">
+              <span class="icon"> <ion-icon name="analytics-outline"></ion-icon></span>
+              <span class="title">Performa</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="akun.html">
+              <span class="icon"> <ion-icon name="settings-outline"></ion-icon></span>
+              <span class="title">Pengaturan</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <span class="icon"> <ion-icon name="log-out-outline"></ion-icon></span>
+              <span class="title">Keluar</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="topbar">
+        <div class="toggle">
+          <ion-icon name="menu-outline"></ion-icon>
+        </div>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="search-here" />
+            <ion-icon name="search-outline"></ion-icon>
+          </label>
+        </div>
+
+        <div class="admin">
+          <img src="image/admin1.jpg" alt="" />
+        </div>
+      </div>
+
+      <!-- Kelola Pengguna -->
+      <div class="kelola">
+        <div class="manageUser">
+          <h2>Kelola Pengguna</h2>
+          <a href="#" class="btn" id="tambah-user">+Pengguna</a>
+        </div>
+
+        <!-- Form Tambah Pengguna -->
+        <div class="form-tambah-pengguna" id="form-tambah">
+          <h3>Tambah Pengguna</h3>
+          <form id="formTambahUser">
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="namapengguna">Nama Pengguna:</label>
+              <input type="text" id="namapengguna" name="namapengguna" required />
+            </div>
+            <div class="form-group">
+              <label for="notelp">No. Telp:</label>
+              <input type="text" id="notelp" name="notelp" required />
+            </div>
+            <div class="form-group">
+              <label for="ttl">Tanggal Lahir:</label>
+              <input type="date" id="ttl" name="ttl" required />
+            </div>
+            <div class="form-group">
+              <label for="alamat">Alamat:</label>
+              <textarea id="alamat" name="alamat" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="photo">Photo:</label>
+              <input type="file" id="photo" name="photo" accept="image/*" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn">Simpan</button>
+              <button type="button" class="btn btn-cancel" id="cancel-tambah">Batal</button>
+            </div>
+          </form>
+        </div>
+        <!-- form edit -->
+        <div class="form-edit-pengguna" id="form-edit-pengguna">
+          <h3>Edit Pengguna</h3>
+          <form id="formEditPengguna">
+            <div class="form-group">
+              <label for="edit_user_id">USER_ID:</label>
+              <input type="text" id="edit_user_id" name="edit_user_id" readonly />
+            </div>
+            <div class="form-group">
+              <label for="edit_email">Email:</label>
+              <input type="email" id="edit_email" name="edit_email" required />
+            </div>
+            <div class="form-group">
+              <label for="edit_nama_pengguna">Nama Pengguna:</label>
+              <input type="text" id="edit_nama_pengguna" name="edit_nama_pengguna" required />
+            </div>
+            <div class="form-group">
+              <label for="edit_no_telp">No. Telp:</label>
+              <input type="text" id="edit_no_telp" name="edit_no_telp" required />
+            </div>
+            <div class="form-group">
+              <label for="edit_ttl">TTL:</label>
+              <input type="date" id="edit_ttl" name="edit_ttl" required />
+            </div>
+            <div class="form-group">
+              <label for="edit_alamat">Alamat:</label>
+              <textarea id="edit_alamat" name="edit_alamat" rows="2" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="edit_password">Password:</label>
+              <input type="password" id="edit_password" name="edit_password" required />
+            </div>
+            <div class="form-group">
+              <label for="edit_photo">Photo:</label>
+              <input type="file" id="edit_photo" name="edit_photo" accept="image/*" />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn">Simpan</button>
+              <button type="button" class="btn btn-cancel" id="cancel-edit-pengguna">Batal</button>
+            </div>
+          </form>
+        </div>
+        <!-- form delete -->
+        <div class="form-delete-pengguna" id="form-delete-pengguna">
+          <h3>Hapus Pengguna</h3>
+          <div class="form-aksi">
+            <button class="btn btn-danger" id="confirm-delete">Hapus</button>
+            <button class="btn btn-cancel" id="cancel-delete">Batal</button>
+          </div>
+        </div>        
+        <!-- table -->
+        <table>
+          <thead>
+            <tr>
+              <th>user_id</th>
+              <th>email</th>
+              <th>namapengguna</th>
+              <th>no_tlpn</th>
+              <th>ttl</th>
+              <th>alamat</th>
+              <th>photo</th>
+              <th>password</th>
+              <th>action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>lukman@gmail.com</td>
+              <td>Lukman Saleh</td>
+              <td>081227377201</td>
+              <td>01-01-1990</td>
+              <td>Batam</td>
+              <td><img src="image/admin1.jpg" alt="User 1" width="50" /></td>
+              <td>password123</td>
+              <td>
+                <button class="edit-btn" aria-label="Edit">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="delete-btn" aria-label="Delete">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>ahmad2@gmail.com</td>
+              <td>Ahmad Yassalam</td>
+              <td>081227377271</td>
+              <td>02-02-1992</td>
+              <td>Batam</td>
+              <td><img src="image/admin2.jpg" alt="User 2" width="50" /></td>
+              <td>password456</td>
+              <td>
+                <button class="edit-btn" aria-label="Edit">
+                  <i class="fas fa-edit"></i>
+                </button>
+                <button class="delete-btn" aria-label="Delete">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Script js -->
+    <script src="js/main.js"></script>
+
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
