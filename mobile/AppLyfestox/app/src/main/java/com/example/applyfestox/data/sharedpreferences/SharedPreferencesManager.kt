@@ -14,7 +14,7 @@ class LoginSessionHelper(context: Context) {
         editor.putInt(KEY_USER_ID, user.id)
         editor.putString(KEY_EMAIL, user.email)
         editor.putString(KEY_NAME, user.name)
-        editor.putString(KEY_PHOTO, user.photo)
+        editor.putString(KEY_PHOTO, user.photo) // Simpan path foto dengan benar
         editor.apply()
     }
 
@@ -26,10 +26,11 @@ class LoginSessionHelper(context: Context) {
             id = sharedPreferences.getInt(KEY_USER_ID, -1),
             email = sharedPreferences.getString(KEY_EMAIL, "") ?: "",
             name = sharedPreferences.getString(KEY_NAME, "") ?: "",
-            birthDate = "", // Tidak perlu birthDate jika tidak digunakan
-            photo = sharedPreferences.getString(KEY_PHOTO, null)
+            birthDate = "",
+            photo = sharedPreferences.getString(KEY_PHOTO, "")
         )
     }
+
 
     fun clearLoginSession() {
         sharedPreferences.edit().clear().apply()

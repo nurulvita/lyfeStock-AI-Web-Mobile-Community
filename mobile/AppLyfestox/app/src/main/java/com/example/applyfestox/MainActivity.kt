@@ -17,13 +17,13 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.applyfestox.screen.MainScreen
-import com.example.applyfestox.screen.Register.RegisterScreen
-import com.example.applyfestox.screen.login.LoginScreen
-import com.example.applyfestox.splash.SplashScreen
-import com.example.applyfestox.splash.WelcomeScreen
-import com.example.applyfestox.ui.theme.AppLyfestoxTheme
+import com.example.applyfestox.uii.screen.MainScreen
+import com.example.applyfestox.uii.screen.Register.RegisterScreen
+import com.example.applyfestox.uii.screen.login.LoginScreen
+import com.example.applyfestox.uii.splash.SplashScreen
+import com.example.applyfestox.uii.splash.WelcomeScreen
 import kotlinx.coroutines.delay
+import theme.AppLyfestoxTheme
 
 class MainActivity : ComponentActivity() {
     private val requestPermissionLauncher =
@@ -87,3 +87,4 @@ fun AppEntryPoint() {
     }
 
 }
+

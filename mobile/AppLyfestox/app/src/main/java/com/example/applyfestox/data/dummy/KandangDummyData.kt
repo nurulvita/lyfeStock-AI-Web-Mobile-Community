@@ -1,7 +1,7 @@
 package com.example.applyfestox.data.dummy
 
 import com.example.applyfestox.R
-import com.example.applyfestox.model.KandangData
+import com.example.applyfestox.data.model.KandangData
 
 object KandangDummyData {
 
