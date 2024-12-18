@@ -10,7 +10,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class UserViewModel(private val context: Context) : ViewModel() {
+class UserViewModel(
+    private val context: Context
+) : ViewModel() {
 
     private val _currentUser = mutableStateOf<User?>(null)
     val currentUser: State<User?> = _currentUser
@@ -36,26 +38,32 @@ class UserViewModel(private val context: Context) : ViewModel() {
 
     /**
      * Login user and save session
+     * @return True if login successful, false otherwise
      */
-    fun login(email: String, password: String): Boolean {
-        var loginSuccessful = false
-        viewModelScope.launch {
-            withContext(Dispatchers.IO) {
-                // Validate user credentials
-                if (databaseHelper.loginUser(email, password)) {
-                    // Fetch user data
-                    val user = databaseHelper.getUserData(email)
-                    user?.let {
-                        // Save login session
-                        loginSessionHelper.saveLoginSession(it)
-                        _currentUser.value = it
-                        loginSuccessful = true
-                    }
+    suspend fun loginAndGetDiagnosa(email: String, password: String): Boolean {
+        return withContext(Dispatchers.IO) {
+            // Validasi login dan ambil userId
+            val userId = databaseHelper.loginUser(email, password)
+            if (userId != null) {
+                // Login sukses, ambil data diagnosa
+                val diagnosaList = databaseHelper.getDiagnosaData(userId)
+
+                // Simpan sesi login dan diagnosa
+                val user = databaseHelper.getUserData(email)
+                user?.let {
+                    loginSessionHelper.saveLoginSession(it)
+                    _currentUser.value = it
+
+                    // Update UI atau status dengan data diagnosa yang sudah diambil
+                    // Bisa menggunakan _diagnosaList.value = diagnosaList jika memakai LiveData atau State
+                    return@withContext true
                 }
             }
+            false // Login gagal
         }
-        return loginSuccessful
     }
+
+
 
     /**
      * Logout user and clear session
